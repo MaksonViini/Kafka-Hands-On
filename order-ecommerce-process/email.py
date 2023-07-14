@@ -21,4 +21,3 @@ while True:
 
         emails_sent.add(customer_email)
 
-        print(f"Emails enviados para {len(emails_sent)} emails unicos")

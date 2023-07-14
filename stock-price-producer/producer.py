@@ -3,8 +3,9 @@ from time import sleep
 
 from dotenv import load_dotenv
 from kafka import KafkaProducer
-from utils import delivery_report
 from yahooquery import Ticker
+
+from utils import delivery_report
 
 load_dotenv()
 
@@ -26,7 +27,7 @@ for i in range(5):
     for symbol in symbols:
         data = prices[symbol]
 
-        price = float(data["regularMarketPrice"])
+        price = data["regularMarketPrice"]
 
         print(f"The price of {symbol} is {price}")
 
